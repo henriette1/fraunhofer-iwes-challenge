@@ -9,7 +9,7 @@ Install and update [docker]() and [docker-compose]() if not installed/updated al
 5. open new terminal/cmd/console tab or window in the root folder
 6. run `docker-compose run python_app`
 
-The stream is ready. You are now able to paste **_single_** incoming motion sensor information coming as proprietary NMEA string.
+The stream is ready. You are now able to paste **_single_** incoming sequences.
 
 eg. samples from the task description:
 ```
