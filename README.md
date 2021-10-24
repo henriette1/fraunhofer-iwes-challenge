@@ -19,4 +19,8 @@ $PHOCT,01,192621.600,T,00,080.274,T,-000.329,T,-02.938,T,+00.252,T,+00.123,-00.0
 $PHOCT,01,192621.700,T,00,080.153,T,-000.438,T,-02.926,T,+00.269,T,+00.141,-00.013,+00.032,+00.128,+00.041,+00.047,-0039.36*06
 ```
 
-Data is then stored, as long as the postgres container is running. 
+## postgreSQL database
+The motion sensor information is stored as `text` in an table which is created by the python application (if the table doesn't exist).
+
+## Usage of GPSd
+I was able to match the acceptance criteria by using a postgreSQL database and a simple python application. Using GPSd seemes to add complexity where it isn't needed, yet. Maybe it will come in handy, when sensor information is processed.
