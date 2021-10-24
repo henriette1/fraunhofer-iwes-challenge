@@ -1,0 +1,19 @@
+version: "3"
+services:
+  iwes-postgres-db:
+    container_name: iwes-postgres-db
+    image: postgres:13.3
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=iwes
+      - POSTGRES_DB=iwes_challenge
+      - POSTGRES_USER=iwes
+    restart: always
+
+  iwes-app:
+    container_name: iwes-app
+    build: .
+    depends_on:
+      - iwes-postgres-db
+

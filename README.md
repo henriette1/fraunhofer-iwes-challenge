@@ -1,0 +1,22 @@
+# Programming task for python delvelopers at IWES
+## Installation
+Install and update [docker]() and [docker-compose]() if not installed/updated already. Then follow those steps:
+
+1. clone this repository
+2. open terminal/cmd/console in the root folder
+3. run `docker-compose up --build --no-start`
+4. run `docker-compose up postgres_db`
+5. open new terminal/cmd/console tab or window in the root folder
+6. run `docker-compose run python_app`
+
+The stream is ready. You are now able to paste **_single_** incoming motion sensor information coming as proprietary NMEA string.
+
+eg. samples from the task description:
+```
+$PHOCT,01,192621.400,T,00,080.378,T,-000.106,T,-03.105,T,+00.220,T,+00.084,-00.025,+00.013,+00.235,+00.024,+00.078,-0008.03*09 
+$PHOCT,01,192621.500,T,00,080.311,T,-000.237,T,-03.066,T,+00.239,T,+00.105,-00.021,+00.020,+00.172,+00.042,+00.073,-0061.95*0D 
+$PHOCT,01,192621.600,T,00,080.274,T,-000.329,T,-02.938,T,+00.252,T,+00.123,-00.017,+00.027,+00.205,+00.048,+00.061,+0001.33*0C 
+$PHOCT,01,192621.700,T,00,080.153,T,-000.438,T,-02.926,T,+00.269,T,+00.141,-00.013,+00.032,+00.128,+00.041,+00.047,-0039.36*06
+```
+
+Data is then stored, as long as the postgres container is running. 
