@@ -1,13 +1,13 @@
 # Programming task for python delvelopers at IWES
 ## Installation
-Install and update [docker]() and [docker-compose]() if not installed/updated already. Then follow those steps:
+Install and update [docker](https://docs.docker.com/get-docker/) if not installed/updated already. Then follow those steps:
 
 1. clone this repository
 2. open terminal/cmd/console in the root folder
 3. run `docker-compose up --build --no-start`
-4. run `docker-compose up postgres_db`
+4. run `docker-compose up iwes-postgres-db`
 5. open new terminal/cmd/console tab or window in the root folder
-6. run `docker-compose run python_app`
+6. run `docker-compose run iwes-app`
 
 The stream is ready. You are now able to paste **_single_** incoming sequences.
 
