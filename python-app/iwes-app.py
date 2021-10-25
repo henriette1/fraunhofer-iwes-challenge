@@ -14,7 +14,7 @@ conn = connect(
 
 cursor = conn.cursor()
 
-cursor.execute(f"CREATE TABLE IF NOT EXISTS {table_name} (id SERIAL PRIMARY KEY, a TEXT, b TEXT, c TEXT, status1 TEXT, d TEXT, e TEXT, status2 TEXT, f TEXT, status3 TEXT, g TEXT, status4 TEXT, HeaveRaw TEXT, status5 TEXT, HeaveLever TEXT, SurgeLever TEXT, SwayLever TEXT, HeaveSpeed TEXT, SurgeSpeed TEXT, SwaySpeed TEXT, HeadingROT TEXT, Checksum TEXT);")
+cursor.execute(f"CREATE TABLE IF NOT EXISTS NMEA (id SERIAL PRIMARY KEY, a TEXT, b TEXT, timestamp TEXT, status1 TEXT, d TEXT, heading TEXT, status2 TEXT, roll TEXT, status3 TEXT, pitch TEXT, status4 TEXT, HeaveRaw TEXT, status5 TEXT, HeaveLever TEXT, SurgeLever TEXT, SwayLever TEXT, HeaveSpeed TEXT, SurgeSpeed TEXT, SwaySpeed TEXT, HeadingROT TEXT, Checksum TEXT);")
 # get column names
 data_frame = pandas.read_sql_query('SELECT * FROM {} LIMIT 0'.format(table_name), conn)
 table_columns = list(pandas.DataFrame.head(data_frame))
