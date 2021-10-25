@@ -19,6 +19,8 @@ $PHOCT,01,192621.600,T,00,080.274,T,-000.329,T,-02.938,T,+00.252,T,+00.123,-00.0
 $PHOCT,01,192621.700,T,00,080.153,T,-000.438,T,-02.926,T,+00.269,T,+00.141,-00.013,+00.032,+00.128,+00.041,+00.047,-0039.36*06
 ```
 
+After stopping the application (typing in exit), the current database table ist printed. The data ist stored as long as the database service is active.
+
 ## postgreSQL database
 The motion sensor information is stored as `text` in an table which is created by the python application (if the table doesn't exist).
 
